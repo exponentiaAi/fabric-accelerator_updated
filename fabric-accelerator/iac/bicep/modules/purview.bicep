@@ -73,7 +73,7 @@ resource existing_purview_account 'Microsoft.Purview/accounts@2023-05-01-preview
   
 resource this_keyvault_accesspolicy 'Microsoft.KeyVault/vaults/accessPolicies@2016-10-01' = if(enable_purview) {
   name: keyvault_name
-  --parent: keyvault
+  parent: '224a3c65-8eb9-4654-8ba7-ea005536e634'
   properties: {
     accessPolicies: [
       { tenantId: 'fb33e7e1-6a98-4d5a-bd25-f47acf95078a'

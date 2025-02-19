@@ -5,7 +5,7 @@ param storage_name string = 'fabricgen2datalake'
 param storage_rg string = 'Fabric'
 
 @description('Managed Identity of the resource being granted permissions')
-param principalId string = ''
+param principalId string = '8e0c3f69-ed67-4374-bad3-00925cc2a0ea'
 
 @description('Flag to grant Storage Blob Data Reader role to the storage account')
 param grant_reader bool = true

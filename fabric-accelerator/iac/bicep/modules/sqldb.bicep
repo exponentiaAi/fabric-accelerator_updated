@@ -18,7 +18,7 @@ param sme_tag string = 'SME'
 
 @description('AD server admin user name')
 @secure()
-param ad_admin_username string = 'badal.salve@exponentia.ai'
+param ad_admin_username string = ['badal.salve@exponentia.ai', 'shreya.bhandge@exponentia.ai']
 
 @description('SID (object ID) of the server administrator')
 @secure()

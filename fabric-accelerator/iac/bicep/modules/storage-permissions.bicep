@@ -39,7 +39,7 @@ resource grant_sbdc_role 'Microsoft.Authorization/roleAssignments@2020-04-01-pre
   properties: {
     principalType: 'ServicePrincipal'
     principalId: '8e0c3f69-ed67-4374-bad3-00925cc2a0ea' // objectID
-    roleDefinitionId: sbdcRoleDefinition.id
+    roleDefinitionId: 'b24988ac-6180-42a0-ab88-20f7382dd24c' //sbdcRoleDefinition.id
   }
 }
 
@@ -50,6 +50,6 @@ resource grant_sbdr_role 'Microsoft.Authorization/roleAssignments@2020-04-01-pre
   properties: {
     principalType: 'ServicePrincipal'
     principalId: '8b19b109-d314-4133-a05f-c249563a42cc' // ObjectID
-    roleDefinitionId: sbdrRoleDefinition.id
+    roleDefinitionId: 'acdd72a7-3385-48ef-bd42-f606fba81ae7'
   }
 }

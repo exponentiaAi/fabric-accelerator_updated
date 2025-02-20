@@ -53,8 +53,8 @@ resource fabricCapacity 'Microsoft.Fabric/capacities@2023-11-01' = {
     //'SME': 'SME_Team'
   //}
   sku: {
-    name: 'Trial'
-    tier: 'FT1'
+    name: skuName
+    tier: skuTier
   }
   properties: {
     administration: {

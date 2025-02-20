@@ -17,17 +17,17 @@ param location string = 'centralindia' // Central India
 @description('The SKU name of the Fabric Capacity.')
 @allowed([
   'Trial'
-  'F2'
-  'F4'
-  'F8'
-  'F16'
-  'F32'
-  'F64'
-  'F128'
-  'F256'
-  'F512'
-  'F1024'
-  'F2048'
+  //'F2'
+  //'F4'
+  //'F8'
+  //'F16'
+  //'F32'
+  //'F64'
+  //'F128'
+  //'F256'
+  //'F512'
+  //'F1024'
+  //'F2048'
 ])
 param skuName string = 'Trial'
 

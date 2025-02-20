@@ -47,16 +47,12 @@ var fabric_uniquename = '${fabric_name}${suffix}'
 resource fabricCapacity 'Microsoft.Fabric/capacities@2023-11-01' = {
   name: toLower(fabric_uniquename)
   location: location
-  //tags: {
-    //'Cost Centre': 'CostCentre123'
-    //'System Owner': 'AdminTeam'
-    //'SME': 'SME_Team'
-  //}
+  properties: {  
   sku: {
     name: skuName
     tier: skuTier
   }
-  properties: {
+ // properties: {
     administration: {
       members: 'powerbipro'
     }

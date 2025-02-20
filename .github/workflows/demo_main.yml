@@ -24,7 +24,7 @@ jobs:
     # List directory contents to debug the file path
     - name: List directory contents
       run: |
-        ls -R ./iac/bicep
+        ls -R ./fabric-accelerator/iac/bicep
         
     # Deploy Bicep file
     - name: deploy
@@ -33,5 +33,6 @@ jobs:
         scope: subscription
         region: centralindia
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-        template: ./iac/bicep/main.bicep
+        template: ./fabric-accelerator/iac/bicep/main.bicep
         failOnStdErr: false
+

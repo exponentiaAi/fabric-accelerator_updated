@@ -1,3 +1,4 @@
+/*
 // Scope
 targetScope = 'Azure subscription 1'
 
@@ -173,3 +174,4 @@ module controldb './modules/sqldb.bicep' = {
      auditrg: audit_rg.name
   }
 }
+*/

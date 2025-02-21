@@ -15,15 +15,6 @@ param sme_tag string = 'SME'
 @description('Key Vault name')
 param keyvault_name string = 'fabric-keyuser'
 
-//@description('Purview Account name')
-//param purview_account_name string = 'fabric-purviewAc'
-
-//@description('Resource group of Purview Account')
-//param purviewrg string = 'Fabric'
-
-//@description('Flag to indicate whether to enable integration of data platform resources with either an existing or new Purview resource')
-//param enable_purview bool=true
-
 // Variables
 var suffix = uniqueString(resourceGroup().id)
 var keyvault_uniquename = '${keyvault_name}-${suffix}'
@@ -65,24 +56,5 @@ resource keyvault 'Microsoft.KeyVault/vaults@2016-10-01' ={
   }
 }
 
-// Create Key Vault Access Policies for Purview
-//resource existing_purview_account 'Microsoft.Purview/accounts@2023-05-01-preview' existing = if(enable_purview) {
-    //name: fabric-purviewAc
-    //scope: 'Fabric'
-  //}
-  
-//resource this_keyvault_accesspolicy 'Microsoft.KeyVault/vaults/accessPolicies@2016-10-01' = if(enable_purview) {
-  //name: keyvault_name
-  //--parent: keyvault
-  //properties: {
-    //accessPolicies: [
-      //{ tenantId: 'fb33e7e1-6a98-4d5a-bd25-f47acf95078a'
-        //objectId: 'ea10fc09-baf2-495b-a56b-f9a139dd4c00'
-        //permissions: {secrets:['list','get','set','Delete','Recover','Backup','Restore']}
-
-      //}
-    //]
-  //}
-//}
 
 output keyvault_name string = keyvault.name

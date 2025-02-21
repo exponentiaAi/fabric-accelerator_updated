@@ -40,9 +40,9 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2022-05-01' = {
   name: audit_storage_uniquename
   location: location
   tags: {
-    'Cost Centre': 'CostCentre123'
-    'System Owner': 'AdminTeam'
-    'SME': 'SME_Team'
+    Cost Centre: 'CostCentre123'
+    System Owner: 'AdminTeam'
+    SME: 'SME_Team'
     }
   sku: {name: audit_storage_sku}
   kind:  'StorageV2'
@@ -67,9 +67,9 @@ resource loganalytics 'Microsoft.OperationalInsights/workspaces@2015-03-20' = {
   name: audit_loganalytics_uniquename
   location: location
   tags: {
-    'Cost Centre': 'CostCentre123'
-    'System Owner': 'AdminTeam'
-    'SME': 'SME_Team'
+    Cost Centre: 'CostCentre123'
+    System Owner: 'AdminTeam'
+    SME: 'SME_Team'
     }
   identity: {type: 'SystemAssigned'}
   properties: {

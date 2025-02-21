@@ -34,9 +34,9 @@ resource keyvault 'Microsoft.KeyVault/vaults@2016-10-01' ={
   name: keyvault_name
   location: location
   tags: {
-    'Cost Centre': 'CostCentre123'
-    'System Owner': 'AdminTeam'
-    'SME': 'SME_Team'
+    Cost Centre: 'CostCentre123'
+    System Owner: 'AdminTeam'
+    SME: 'SME_Team'
   }
   properties:{
     tenantId: 'fb33e7e1-6a98-4d5a-bd25-f47acf95078a'

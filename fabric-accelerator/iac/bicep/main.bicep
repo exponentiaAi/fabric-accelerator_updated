@@ -155,7 +155,8 @@ module controldb './modules/sqldb.bicep' = {
   name: controldb_deployment_name
   scope: fabric_rg
   params:{
-     sqlserver_name: 'fabric-database.database.windows.net'
+     //sqlserver_name: 'fabric-database.database.windows.net'
+     sqlserver_name: 'fabric-database.${environment().suffixes.sqlServerHostname}'
      database_name: 'Fabric' 
      location: fabric_rg.location
      Cost Centre: 'CostCentre123'

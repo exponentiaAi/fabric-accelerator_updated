@@ -10,7 +10,7 @@ param dprg string= 'Fabric'
 param rglocation string = 'Centralindia'
 
 @description('Cost Centre tag that will be applied to all resources in this deployment')
-param cost_centre_tag string = 'CostCentre'
+param cost_centre_tag string = 'Cost Centre'
 
 @description('System Owner tag that will be applied to all resources in this deployment')
 param owner_tag string = 'powerbipro@exponentia.ai'
@@ -61,7 +61,7 @@ module kv './modules/keyvault.bicep' = {
   name: keyvault_deployment_name
   scope: fabric_rg
   params:{
-     location: fabric_rg.location
+     location: fabric_rg.rglocation
      keyvault_name: 'fabric-keyuser'
      cost_centre_tag: cost_centre_tag
      owner_tag: owner_tag
@@ -79,7 +79,7 @@ module audit_integration './modules/audit.bicep' = if(enable_audit) {
   name: audit_deployment_name
   scope: audit_rg
   params:{
-    location: audit_rg.location
+    location: audit_rg.rglocation
     cost_centre_tag: cost_centre_tag
     owner_tag: owner_tag
     sme_tag: sme_tag
@@ -95,7 +95,7 @@ module fabric_capacity './modules/fabric-capacity.bicep' = {
   scope: fabric_rg
   params:{
     fabric_name: 'powerbipro'
-    location: fabric_rg.location
+    location: fabric_rg.rglocation
     cost_centre_tag: cost_centre_tag
     owner_tag: owner_tag
     sme_tag: sme_tag
@@ -111,7 +111,7 @@ module controldb './modules/sqldb.bicep' = {
     
      sqlserver_name: 'fabric-database.${environment().suffixes.sqlServerHostname}'
      database_name: 'Fabric' 
-     location: fabric_rg.location
+     location: fabric_rg.rglocation
      CostCentre: 'CostCentre123'
      SystemOwner: 'AdminTeam'
      SME: 'SME_Team'

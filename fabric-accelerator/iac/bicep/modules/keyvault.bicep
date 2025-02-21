@@ -71,18 +71,18 @@ resource keyvault 'Microsoft.KeyVault/vaults@2016-10-01' ={
     //scope: 'Fabric'
   //}
   
-resource this_keyvault_accesspolicy 'Microsoft.KeyVault/vaults/accessPolicies@2016-10-01' = if(enable_purview) {
-  name: keyvault_name
-  --parent: keyvault
-  properties: {
-    accessPolicies: [
-      { tenantId: 'fb33e7e1-6a98-4d5a-bd25-f47acf95078a'
-        objectId: 'ea10fc09-baf2-495b-a56b-f9a139dd4c00'
-        permissions: {secrets:['list','get','set','Delete','Recover','Backup','Restore']}
+//resource this_keyvault_accesspolicy 'Microsoft.KeyVault/vaults/accessPolicies@2016-10-01' = if(enable_purview) {
+  //name: keyvault_name
+  //--parent: keyvault
+  //properties: {
+    //accessPolicies: [
+      //{ tenantId: 'fb33e7e1-6a98-4d5a-bd25-f47acf95078a'
+        //objectId: 'ea10fc09-baf2-495b-a56b-f9a139dd4c00'
+        //permissions: {secrets:['list','get','set','Delete','Recover','Backup','Restore']}
 
-      }
-    ]
-  }
-}
+      //}
+    //]
+  //}
+//}
 
 output keyvault_name string = keyvault.name

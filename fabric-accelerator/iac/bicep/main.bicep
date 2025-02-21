@@ -215,9 +215,9 @@ resource fabric_rg  'Microsoft.Resources/resourceGroups@2020-06-01' = {
   name: dprg 
   location: rglocation
   tags: {
-    CostCentre: CostCentre123
-    SystemOwner: AdminTeam
-    SME: SME_Team
+    CostCentre: 'CostCentre123'
+    SystemOwner: 'AdminTeam'
+    SME: 'SME_Team'
   }
 }
 
@@ -226,9 +226,9 @@ resource audit_rg  'Microsoft.Resources/resourceGroups@2020-06-01' = if(enable_a
   name: auditrg 
   location: rglocation
   tags: {
-    CostCentre: CostCentre123
-    SystemOwner: AdminTeam
-    SME: SME_Team
+    CostCentre: 'CostCentre123'
+    SystemOwner: 'AdminTeam'
+    SME: 'SME_Team'
   }
 }
 

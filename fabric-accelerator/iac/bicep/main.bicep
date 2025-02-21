@@ -10,7 +10,7 @@ param dprg string= 'Fabric'
 param rglocation string = 'Centralindia'
 
 @description('Cost Centre tag that will be applied to all resources in this deployment')
-param cost_centre_tag string = 'Fabric'
+param cost_centre_tag string = 'MCAPS'
 
 @description('System Owner tag that will be applied to all resources in this deployment')
 param owner_tag string = 'powerbipro@exponentia.ai'

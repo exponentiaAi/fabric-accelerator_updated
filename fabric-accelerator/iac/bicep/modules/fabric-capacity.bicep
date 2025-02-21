@@ -5,15 +5,6 @@ param fabric_name string = 'powerbipro'
 @description('The Azure Region to deploy the resources into.')
 param location string = 'centralindia' // Central India
 
-//@description('Cost Centre tag that will be applied to all resources in this deployment')
-//param cost_centre_tag string = 'Cost Centre'
-
-//@description('System Owner tag that will be applied to all resources in this deployment')
-//param owner_tag string = 'System Owner'
-
-//@description('Subject Matter Expert (SME) tag that will be applied to all resources in this deployment')
-//param sme_tag string = 'SME' 
-
 @description('The SKU name of the Fabric Capacity.')
 @allowed([
   'Trial'

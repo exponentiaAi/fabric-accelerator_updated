@@ -8,10 +8,10 @@ param database_name string = 'Fabric'
 param location string = 'centralindia'
 
 @description('Cost Centre tag that will be applied to all resources in this deployment')
-param cost_centre_tag string = 'MCAPS'
+param cost_centre_tag string = 'CostCentre'
 
 @description('System Owner tag that will be applied to all resources in this deployment')
-param owner_tag string = 'System Owner'
+param owner_tag string = 'SystemOwner'
 
 @description('Subject Matter Expert (SME) tag that will be applied to all resources in this deployment')
 param sme_tag string = 'SME' 

@@ -54,9 +54,9 @@ resource fabric_rg  'Microsoft.Resources/resourceGroups@2020-06-01' = {
  name: dprg 
  location: rglocation
  tags: {
-        'Cost Centre': 'CostCentre123'
-        'System Owner': 'AdminTeam'
-        'SME': 'SME_Team'
+        Cost Centre: 'CostCentre123'
+        System Owner: 'AdminTeam'
+        SME: 'SME_Team'
   }
 }
 
@@ -77,9 +77,9 @@ resource audit_rg  'Microsoft.Resources/resourceGroups@2020-06-01' = if(enable_a
   name: auditrg 
   location: rglocation
   tags: {
-         'Cost Centre': 'CostCentre123'
-         'System Owner': 'AdminTeam'
-         'SME': 'SME_Team'
+         Cost Centre: 'CostCentre123'
+         System Owner: 'AdminTeam'
+         SME: 'SME_Team'
    }
  }
 
@@ -156,7 +156,7 @@ module controldb './modules/sqldb.bicep' = {
   scope: fabric_rg
   params:{
      sqlserver_name: 'fabric-database.database.windows.net'
-     database_name: 'fabric-database' 
+     database_name: 'Fabric' 
      location: fabric_rg.location
      'Cost Centre': 'CostCentre123'
      'System Owner': 'AdminTeam'

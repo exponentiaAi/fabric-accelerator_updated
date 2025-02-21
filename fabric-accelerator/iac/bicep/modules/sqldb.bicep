@@ -30,14 +30,8 @@ param database_sku_name string ='GP_S_Gen5_1'
 @description('Time in minutes after which database is automatically paused')
 param auto_pause_duration int =60
 
-//@description('Flag to indicate whether to enable integration of data platform resources with either an existing or new Purview resource')
-//param enable_purview bool = true
-
 @description('Flag to indicate whether to enable audit logging of SQL Server')
 param enable_audit bool = false
-
-//@description('Resource Name of new or existing Purview Account. Specify a resource name if create_purview=true or enable_purview=true')
-//param purview_resource object = 'fabric-purviewAc'
 
 @description('Resource name of audit storage account.')
 param audit_storage_name string = 'fabricgen2datalake'
@@ -140,15 +134,6 @@ resource readerRoleDefinition 'Microsoft.Authorization/roleDefinitions@2018-01-0
   name: '2a2b9908-6ea1-4ae2-8e65-a410df84e7d1'
 }
 
-//resource grant_purview_reader_role 'Microsoft.Authorization/roleAssignments@2023-05-01-preview' = if (enable_purview){
-  //name: guid(subscription().subscriptionId, sqlserver.name, readerRoleDefinition.id)
-  //scope: sqlserver
-  //properties: {
-    //principalType: 'ServicePrincipal'
-   //-- principalId: 'ea10fc09-baf2-495b-a56b-f9a139dd4c00'
-   //-- roleDefinitionId: readerRoleDefinition.id
-  //}
-//}
 output sqlserver_uniquename string = sqlserver.name
 output database_name string = database.name
 output sqlserver_resource object = sqlserver

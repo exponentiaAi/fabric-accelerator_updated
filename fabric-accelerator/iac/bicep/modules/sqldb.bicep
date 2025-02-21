@@ -54,8 +54,8 @@ resource sqlserver 'Microsoft.Sql/servers@2022-02-01-preview' ={
   name: sqlserver_unique_name
   location: location
   tags: {
-    Cost Centre: 'CostCentre123'
-    System Owner: 'AdminTeam'
+    CostCentre: 'CostCentre123'
+    SystemOwner: 'AdminTeam'
     SME: 'SME_Team'
     }
   identity:{ type: 'SystemAssigned'}
@@ -87,8 +87,8 @@ resource database 'Microsoft.Sql/servers/databases@2022-11-01-preview' ={
   name: database_name
   location: location
   tags: {
-    Cost Centre: 'CostCentre123'
-    System Owner: 'AdminTeam'
+    CostCentre: 'CostCentre123'
+    SystemOwner: 'AdminTeam'
     SME: 'SME_Team'
     }
   sku:{name: 'GP_S_Gen5'}

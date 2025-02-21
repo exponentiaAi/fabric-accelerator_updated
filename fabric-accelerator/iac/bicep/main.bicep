@@ -158,9 +158,9 @@ module controldb './modules/sqldb.bicep' = {
      sqlserver_name: 'fabric-database.database.windows.net'
      database_name: 'Fabric' 
      location: fabric_rg.location
-     'Cost Centre': 'CostCentre123'
-     'System Owner': 'AdminTeam'
-     'SME': 'SME_Team'
+     Cost Centre: 'CostCentre123'
+     System Owner: 'AdminTeam'
+     SME: 'SME_Team'
      ad_admin_username:  kv_ref.getSecret('badal.salve@exponentia.ai')
      ad_admin_sid:  kv_ref.getSecret('8e0c3f69-ed67-4374-bad3-00925cc2a0ea')  
      auto_pause_duration: 60

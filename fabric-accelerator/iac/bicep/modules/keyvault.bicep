@@ -4,7 +4,7 @@
 param location string = 'centralindia'
 
 @description('Cost Centre tag that will be applied to all resources in this deployment')
-param cost_centre_tag string = 'Cost Centre'
+param cost_centre_tag string = 'Fabric'
 
 @description('System Owner tag that will be applied to all resources in this deployment')
 param owner_tag string = 'System Owner'

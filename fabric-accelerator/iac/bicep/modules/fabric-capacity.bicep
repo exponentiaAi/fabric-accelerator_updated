@@ -52,7 +52,7 @@ resource fabricCapacity 'Microsoft.Fabric/capacities@2023-11-01' = {
 
 // Outputs
 @description('The ID of the Fabric Capacity.')
-output resourceId string = '0A4DB34F-8209-4C0C-94BA-61F83266DD11'
+output resourceId string = fabricCapacity.id
 
 @description('The name of the Fabric Capacity.')
-output resourceName string = 'Trial-20250102T115919Z-q0ce2Ai6Uk62FwMKR1aJwA'
+output resourceName string = fabricCapacity.name

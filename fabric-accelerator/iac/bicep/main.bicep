@@ -94,7 +94,7 @@ module fabric_capacity './modules/fabric-capacity.bicep' = {
   name: fabric_deployment_name
   scope: fabric_rg
   params:{
-    fabric_name: 'powerbipro'
+    fabric_name: 'fabricacceleratorcapacity'
     location: fabric_rg.rglocation
     cost_centre_tag: cost_centre_tag
     owner_tag: owner_tag

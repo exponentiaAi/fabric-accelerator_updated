@@ -16,15 +16,15 @@ jobs:
     #Log into Azure
     - uses: azure/login@v1
       with:
-           creds: '{"clientId":"${{ secrets.ACTION_SPN_CLIENTID }}","clientSecret":"${{ secrets.ACTION_SPN_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
+           creds: '{"clientId":"${{ fb4f745b-fb66-4e42-bf43-9ad00919afa3 }}","clientSecret":"${{ 1WC8Q~OGQxVE5ztrIV5vo4h9e2EemaA28p1fSdfY }}","subscriptionId":"${{ 224a3c65-8eb9-4654-8ba7-ea005536e634 }}","tenantId":"${{ fb33e7e1-6a98-4d5a-bd25-f47acf95078a }}"}'
 
     # Deploy Bicep file
     - name: deploy
       uses: azure/arm-deploy@v1
       with:
         scope: subscription
-        region: australiaeast
-        subscriptionId: ${{ secrets.SUBSCRIPTION_ID }}
+        region: centralindia
+        subscriptionId: ${{224a3c65-8eb9-4654-8ba7-ea005536e634}}
         template: iac/bicep/main.bicep
         # parameters: 'k1=v1 k2=v2 k3=v3'
         failOnStdErr: false

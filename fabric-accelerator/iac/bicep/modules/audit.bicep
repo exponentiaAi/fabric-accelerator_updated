@@ -28,7 +28,7 @@ param audit_storage_name string = 'fabricgen2datalake'
 param audit_storage_sku string ='Standard_LRS'
 
 @description('Audit Log Analytic Workspace name')
-param audit_loganalytics_name string = 'fabric-logs'
+param audit_loganalytics_name string = 'Fabric'
 
 // Variables
 var suffix = uniqueString(resourceGroup().id)

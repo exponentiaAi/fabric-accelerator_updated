@@ -115,8 +115,8 @@ module controldb './modules/sqldb.bicep' = {
      CostCentre: 'CostCentre123'
      SystemOwner: 'AdminTeam'
      SME: 'SME_Team'
-     ad_admin_username:  kv_ref.getSecret('badal.salve@exponentia.ai')
-     ad_admin_sid:  kv_ref.getSecret('8e0c3f69-ed67-4374-bad3-00925cc2a0ea')  
+     ad_admin_username:  kv_ref.getSecret('powerbipro@exponentia.ai')
+     ad_admin_sid:  kv_ref.getSecret('a2ee70c0-b5d8-4496-b6ed-2fc0b824155e')  
      auto_pause_duration: 60
      database_sku_name: 'GP_S_Gen5_1' 
      enable_audit: false

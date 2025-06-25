@@ -25,7 +25,7 @@ param deployment_suffix string = utcNow()
 param enable_audit bool = true
 
 @description('Resource group where audit resources will be deployed if enabled. Resource group will be created if it doesnt exist')
-param auditrg string= 'fabric-logs'
+param auditrg string= 'Fabric'
 
 
 // Variables
@@ -85,7 +85,7 @@ module audit_integration './modules/audit.bicep' = if(enable_audit) {
     sme_tag: sme_tag
     audit_storage_name: 'fabricgen2datalake'
     audit_storage_sku: 'Standard_LRS'    
-    audit_loganalytics_name: 'fabric-logs'
+    audit_loganalytics_name: 'Fabric'
   }
 }
 

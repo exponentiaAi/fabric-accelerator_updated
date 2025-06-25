@@ -41,15 +41,15 @@ resource keyvault 'Microsoft.KeyVault/vaults@2016-10-01' ={
     // Default Access Policies. Replace the ObjectID's with your user/group id
     accessPolicies:[
       { tenantId: 'fb33e7e1-6a98-4d5a-bd25-f47acf95078a'
-        objectId: '8e0c3f69-ed67-4374-bad3-00925cc2a0ea' // Replace this with your user/group ObjectID
+        objectId: 'a2ee70c0-b5d8-4496-b6ed-2fc0b824155e' // Replace this with your user/group ObjectID
         permissions: {secrets:['list','get','set','Delete','Recover','Backup','Restore']}        
       }
       { tenantId: 'fb33e7e1-6a98-4d5a-bd25-f47acf95078a'
-        objectId: '5d2bf1c7-0d3e-41dd-b2d3-b28745352812' // Replace this with your user/group ObjectID
+        objectId: 'a2ee70c0-b5d8-4496-b6ed-2fc0b824155e' // Replace this with your user/group ObjectID
         permissions: {secrets:['list','get','set','Delete','Recover','Backup','Restore']}
       }
       { tenantId: 'fb33e7e1-6a98-4d5a-bd25-f47acf95078a'
-        objectId: '8b19b109-d314-4133-a05f-c249563a42cc' // Replace this with your user/group ObjectID
+        objectId: 'a2ee70c0-b5d8-4496-b6ed-2fc0b824155e' // Replace this with your user/group ObjectID
         permissions: {secrets:['list','get','set','Delete','Recover','Backup','Restore']}
       }
     ]

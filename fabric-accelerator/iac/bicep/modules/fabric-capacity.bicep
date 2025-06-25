@@ -1,6 +1,6 @@
 // Parameters
 @description('The name of the Fabric Capacity.')
-param fabric_name string = 'powerbipro'
+param fabric_name string = 'fabricacceleratorcapacity'
 
 @description('The Azure Region to deploy the resources into.')
 param location string = 'centralindia' // Central India
